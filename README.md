@@ -2,8 +2,8 @@
 pod 'UIColor+PerceivedLuminance'
 ```
 
-Coupled with the `UIImageAverageColor` pod you can use this pod to determine
-what preferredStatusBarStyle to set for your ViewControllers:
+Coupled with the `UIImage+AverageColor` pod you can use this pod to determine
+what `preferredStatusBarStyle` to set for your ViewControllers:
 
 ```objc
 #import "UIImage+AverageColor.h"
