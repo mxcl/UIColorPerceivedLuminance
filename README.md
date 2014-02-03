@@ -9,14 +9,15 @@ what `preferredStatusBarStyle` to set for your ViewControllers:
 #import "UIImage+AverageColor.h"
 #import "UIColor+PerceivedLuminance.h"
 
-…
 
-//…
+@implementation MyViewController
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return self.topImageView.image.averageColor.perceivedLuminance > 0.5
         ? UIStatusBarStyleLightContent
         : UIStatusBarStyleDefault;
 }
+
+@end
 
 ```
