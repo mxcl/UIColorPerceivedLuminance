@@ -21,3 +21,5 @@ what `preferredStatusBarStyle` to set for your ViewControllers:
 @end
 
 ```
+
+If you are having trouble getting `preferredStatusBarStyle` to be respected, I recommmend this StackOverflow question/answer: http://stackoverflow.com/questions/19108513/uistatusbarstyle-preferredstatusbarstyle-does-not-work-on-ios-7/19365160#19365160
