@@ -31,14 +31,17 @@ THE SOFTWARE.
 @implementation UIColor (PerceivedLuminance)
 
 - (double)perceivedLuminance {
-    float r, g, b, a;
-    [self getRed:&r green:&g blue:&b alpha:&a];
-    uint8_t pixelR = r * 255.f;
-    uint8_t pixelG = g * 255.f;
-    uint8_t pixelB = b * 255.f;
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    float r = components[0];
+    float g = components[1];
+    float b = components[2];
 
     // The human eye favors green, then red, then blue
-    return 1 - (((0.587 * pixelG) + (0.299 * pixelR) + (0.114 * pixelB)) / 255);
+    g *= 0.7152;
+    r *= 0.2126;
+    b *= 0.0722;
+
+    return 1.0 - (g + r + b);
 }
 
 @end
